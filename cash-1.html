@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cash-1.css" type="text/css">
+    <link href="images/logo.png" rel="shortcut icon" type="image/x-icon" width="16px" height="16px">
+    <title>준비, 시장!</title>
+</head>
+
+<body>
+
+    <div class="wall"></div>
+
+    <div class="bottom-wall"></div>
+    <div class="bottom-box">
+        <div>
+            <img src="images/store.png" class="bar" alt="" style="width: 30px; height: 30px; margin-left: 43px;">
+            <h2 class="bar-content" style="margin-left: 20px;">나의 가게 현황</h2>
+        </div>
+        <div>
+            <img src="images/draw.png" class="bar" alt=""
+                style="width: 30px; height: 30px; margin-left: 16px;margin-right: 7px;">
+            <h2 class="bar-content" style="margin-left: -7.5px;margin-top: 9px;">가게 정보 수정</h2>
+        </div>
+        <div>
+            <img src="images/eye.png" class="bar" alt=""
+                style="width: 37px; height: 38px; margin-right: 19px;padding-top:-4px;">
+            <h2 class="bar-content" style="margin-left: -19px;margin-top: 2px;">노출 수</h2>
+        </div>
+        <div>
+            <img src="images/help-web-button (1).png" class="bar" alt=""
+                style="width: 26px; height: 26px; margin-right: 41px;padding-top:3px;">
+            <h2 class="bar-content" style="margin-left: -40px;">사용 방법</h2>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="backbox">
+            <div class="back" onclick="">&lt;</div>
+            <div class="hongbosujung">
+                홍보/수정하기
+            </div>
+        </div>
+
+        <h2 class="input">정보입력</h2>
+        <hr class="sun">
+
+        <form action="cash-1.php" method="get">
+            <div>
+                <div class="mission1"><span class="star">*</span>점포명</div>
+                <div class="textbox1">
+                    <input class="insert-1" type="text" name="jumpo" value="점포명을 입력하세요" onfocus="this.value=''"
+                        onblur="this.value">
+                </div>
+                <div class="mission2"><span class="star">*</span>점포 위치</div>
+                <div class="textbox1">
+                    <input class="insert-2" type="text" value="위치를 설정해주세요" onfocus="this.value=''" onblur="this.value">
+                </div>
+
+                <input class="pic-load" type="file" id="input-file" style="display: none;">
+
+                <div>
+                    <div class="mission3">사진 등록</div>
+                    <div style="overflow: hidden;">
+                        <!-- 첫 번째 take-photo 요소 -->
+                        <div class="take-photo1">
+                            <img src="images/dslr-camera.png" alt=""
+                                style="margin-top: 39px;margin-left: 67px; width:49px; height: 49px; cursor: pointer;">
+                            <p
+                                style="margin-top: -1px;text-align: center;color: #00A863;font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;opacity: 0.4;">
+                                카메라로 촬영하기</p>
+                        </div>
+                        <!-- 두 번째 take-photo 요소 -->
+                        <div class="take-photo2">
+                            <label for="input-file">
+                                <img src="images/photo.png" alt=""
+                                    style="margin-top: 39px; margin-left: 67px;width:49px; height: 49px; cursor: pointer;">
+                            </label>
+                            <p
+                                style="margin-top: -1px; text-align: center; color: #00A863; font-family: Pretendard; font-size: 15px; font-style: normal; font-weight: 400; line-height: normal; letter-spacing: -0.75px; opacity: 0.4;">
+                                사진 불러오기</p>
+                        </div>
+                    </div>
+
+                    <div class="mission4"><span class="star">*</span>가게 전화번호<span class="case"> ( "-" 없이 입력해 주세요.
+                            )</span></div>
+                    <div class="textbox1">
+                        <input class="insert-3" type="text" name="phonenum" value="전화번호를 입력해주세요" onfocus="this.value=''"
+                            onblur="this.value">
+                    </div>
+
+                    <div class="mission5"><span class="star">*</span>가게 영얼일</div>
+                    <div class="textbox1">
+                        <div id="title1" class="bbttnn" value="월" style="margin-left: 51px;">월</div>
+                        <div id="title2" class="bbttnn" value="화" style="margin-left: 29px;">화</div>
+                        <div id="title3" class="bbttnn" value="수" style="margin-left: 29px;">수</div>
+                        <div id="title4" class="bbttnn" value="목" style="margin-left: 29px;">목</div>
+                        <div id="title5" class="bbttnn" value="금" style="margin-left: 29px;">금</div>
+                        <div id="title6" class="bbttnn" value="토" style="margin-left: 29px;">토</div>
+                        <div id="title7" class="bbttnn" value="일" style="margin-left: 29px;">일</div>
+                    </div>
+
+                    <div class="mission6">가게 휴무일</div>
+                    <div class="textbox1">
+                        <div id="title8" class="bbttnn" value="월" style="margin-left: 51px;">월</div>
+                        <div id="title9" class="bbttnn" value="화" style="margin-left: 29px;">화</div>
+                        <div id="title10" class="bbttnn" value="수" style="margin-left: 29px;">수</div>
+                        <div id="title11" class="bbttnn" value="목" style="margin-left: 29px;">목</div>
+                        <div id="title12" class="bbttnn" value="금" style="margin-left: 29px;">금</div>
+                        <div id="title13" class="bbttnn" value="토" style="margin-left: 29px;">토</div>
+                        <div id="title14" class="bbttnn" value="일" style="margin-left: 29px;">일</div>
+                    </div>
+
+                    <div class="mission11"><span class="star">*</span>가게 운영 시간</div>
+                    <div class="timeset-1">
+                        <input class="timeset-2" type="time" name="opentime">
+                    </div>
+                    <span class="wave">~</span>
+                    <div class="timeset-3">
+                        <input class="timeset-4" type="time" name="closetime">
+                    </div><br><br>
+
+                    <div class="mission7"><span class="star">*</span>가게 이용 방법</div>
+                    <input class="textbox2" type="button" value="매장 식사" name="eathere"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+                    <input class="textbox3" type="button" value="포장" name="takeout"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+                    <input class="textbox4" type="button" value="배달" name="deliery"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+                    <input class="textbox5" type="button" value="기타" name="else"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+
+                    <div class="mission8"><span class="star">*</span>결제 방식</div>
+                    <input class="textbox6" type="button" value="현금" name="cash"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+                    <input class="textbox7" type="button" value="카드" name="card"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+                    <input class="textbox8" type="button" value="상품권" name="poucher"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+                    <input class="textbox9" type="button" value="지역화폐" name="localmoney"
+                        style="font-family: Pretendard;font-size: 15px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: -0.75px;">
+
+                    <div class="mission9"><span class="star">*</span>홍보 메시지 작성</div>
+                    <div class="textbox9-9">
+                        <textarea onfocus="this.value=''" onblur="this.value">홍보 메시지를 작성하세요</textarea>
+                    </div>
+
+                    <div class="mission10"><span class="star">*</span>카테고리 설정</div>
+                    <!--<label class="category" for="lang"></label>-->
+                    <select class="category-1" name="category-1" id="cate">
+                        <optgroup label="--분류  1--">
+                            <option value="미선택">없음</option>
+                            <option value="축산">축산</option>
+                            <option value="수산">수산</option>
+                            <option value="청과">청과</option>
+                            <option value="음식">음식</option>
+                        </optgroup>
+                        <optgroup label="--분류 2--">
+                            <option value="의류">의류</option>
+                            <option value="신발">신발</option>
+                            <option value="악세서리">악세서리</option>
+                        </optgroup>
+                        <optgroup label="--분류 3--">
+                            <option value="생활용품">생활용품</option>
+                            <option value="침구">침구</option>
+                        </optgroup>
+                        <optgroup label="--분류 4--">
+                            <option value="공방">공방</option>
+                            <option value="도서">도서</option>
+                            <option value="문구">문구</option>
+                        </optgroup>
+                        <optgroup label="--분류 5--">
+                            <option value="기타">기타</option>
+                        </optgroup>
+                    </select>
+                    <select class="category-1" name="category-2" id="cate" style="margin-left: 18px;">
+                        <optgroup label="--분류  1--">
+                            <option value="미선택">없음</option>
+                            <option value="축산">축산</option>
+                            <option value="수산">수산</option>
+                            <option value="청과">청과</option>
+                            <option value="음식">음식</option>
+                        </optgroup>
+                        <optgroup label="--분류 2--">
+                            <option value="의류">의류</option>
+                            <option value="신발">신발</option>
+                            <option value="악세서리">악세서리</option>
+                        </optgroup>
+                        <optgroup label="--분류 3--">
+                            <option value="생활용품">생활용품</option>
+                            <option value="침구">침구</option>
+                        </optgroup>
+                        <optgroup label="--분류 4--">
+                            <option value="공방">공방</option>
+                            <option value="도서">도서</option>
+                            <option value="문구">문구</option>
+                        </optgroup>
+                        <optgroup label="--분류 5--">
+                            <option value="기타">기타</option>
+                        </optgroup>
+                    </select>
+                    <select class="category-1" name="category-3" id="cate" style="margin-left: 18px;">
+                        <optgroup label="--분류  1--">
+                            <option value="미선택">없음</option>
+                            <option value="축산">축산</option>
+                            <option value="수산">수산</option>
+                            <option value="청과">청과</option>
+                            <option value="음식">음식</option>
+                        </optgroup>
+                        <optgroup label="--분류 2--">
+                            <option value="의류">의류</option>
+                            <option value="신발">신발</option>
+                            <option value="악세서리">악세서리</option>
+                        </optgroup>
+                        <optgroup label="--분류 3--">
+                            <option value="생활용품">생활용품</option>
+                            <option value="침구">침구</option>
+                        </optgroup>
+                        <optgroup label="--분류 4--">
+                            <option value="공방">공방</option>
+                            <option value="도서">도서</option>
+                            <option value="문구">문구</option>
+                        </optgroup>
+                        <optgroup label="--분류 5--">
+                            <option value="기타">기타</option>
+                        </optgroup>
+                    </select>
+                    <select class="category-1" name="category-4" id="cate" style="margin-left: 18px;">
+                        <optgroup label="--분류  1--">
+                            <option value="미선택">없음</option>
+                            <option value="축산">축산</option>
+                            <option value="수산">수산</option>
+                            <option value="청과">청과</option>
+                            <option value="음식">음식</option>
+                        </optgroup>
+                        <optgroup label="--분류 2--">
+                            <option value="의류">의류</option>
+                            <option value="신발">신발</option>
+                            <option value="악세서리">악세서리</option>
+                        </optgroup>
+                        <optgroup label="--분류 3--">
+                            <option value="생활용품">생활용품</option>
+                            <option value="침구">침구</option>
+                        </optgroup>
+                        <optgroup label="--분류 4--">
+                            <option value="공방">공방</option>
+                            <option value="도서">도서</option>
+                            <option value="문구">문구</option>
+                        </optgroup>
+                        <optgroup label="--분류 5--">
+                            <option value="기타">기타</option>
+                        </optgroup>
+                    </select>
+
+                    <div class="mission10"><span class="star">*</span>노출 빈도수 설정<span class="case"> (광고 노출 정도에 따라 수수료 차등
+                            부과)</span></div>
+                    <div style="margin-top: 23px;">
+                        <input class="first" type="radio" id="option1" name="option1" value="1">
+                        <input class="sec" type="radio" id="option2" name="option2" value="2">
+                        <input class="sec" type="radio" id="option3" name="option3" value="3">
+                        <input class="sec" type="radio" id="option4" name="option4" value="4">
+                        <input class="sec" type="radio" id="option5" name="option5" value="5">
+                        <hr class="sun2">
+                        <label class="first-2" for="option1"
+                            style="color: #00A863;font-family: Pretendard;font-size: 20px;font-style: normal;font-weight: 600;">1</label>
+                        <label class="first-3" for="option2"
+                            style="color: #00A863;font-family: Pretendard;font-size: 20px;font-style: normal;font-weight: 600;">2</label>
+                        <label class="first-4" for="option3"
+                            style="color: #00A863;font-family: Pretendard;font-size: 20px;font-style: normal;font-weight: 600;">3</label>
+                        <label class="first-5" for="option4"
+                            style="color: #00A863;font-family: Pretendard;font-size: 20px;font-style: normal;font-weight: 600;">4</label>
+                        <label class="first-6" for="option5"
+                            style="color: #00A863;font-family: Pretendard;font-size: 20px;font-style: normal;font-weight: 600;">5</label>
+                        <label class="first-1" for="option1">매우 낮음</label>
+                        <label class="sec-2" for="option2">낮음</label>
+                        <label class="sec-3" for="option3">보통</label>
+                        <label class="sec-4" for="option4">높음</label>
+                        <label class="sec-5" for="option5">매우 높음</label>
+                    </div>
+                    <div class="mission10"><span class="star">*</span>예상 광고 수수료</div>
+                    <div class="gageok" id="answer"></div>
+
+                    <!--맨 뒤에 함수 추가됨-->
+                    <input class="button1" type="submit" value="디자인 미리보기"
+                        style="color: #FFF;font-family: Pretendard;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;"
+                        onclick="">
+
+        </form>
+    </div>
+
+    <script type="text/javascript" src="cash-1.js"></script>
+
+    </div>
+</body>
+
+</html>
